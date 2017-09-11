@@ -1,0 +1,242 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shkurtagashi.energieinformatik.Program.SixthOctoberSchedule">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:background="#607D8B"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Time"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Event" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8:30 - 9:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Conference opening" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9:00 – 10:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Keynote by Prof. Kamin Whitehouse" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10:00 – 10:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Coffee break" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10:30 – 12:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Paper Session 1" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:00 – 12:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Posters and Demos: 1-minute madness" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:30 – 14:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Lunch + Poster and Demo Session" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="14:30 – 16:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Paper Session 2" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="14:30 – 16:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Tools and Methods Workshop*" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="16:00 – 16:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Coffee break" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="16:30 – 18:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Paper Session 3" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="From 19:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Social dinner" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="*This workshop takes place in room 351 in the main building." />
+        </TableRow>
+
+    </TableLayout>
+</FrameLayout>

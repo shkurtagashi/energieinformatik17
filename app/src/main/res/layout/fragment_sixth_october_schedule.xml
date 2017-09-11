@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shkurtagashi.energieinformatik.Program.SixthOctoberSchedule">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Time"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Event" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow22"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8:45 - 9:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Welcome session" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow33"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9:00 – 10:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Keynote by Wolfgang Korosec" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow44"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10:00 – 10:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Coffee break" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow55"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10:30 – 12:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Paper Session 4" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow66"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:00 – 13:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Lunch" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow77"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="13:30 – 15:00"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Paper Session 5" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow88"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15:00 – 15:30"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Wrap-up and farewell" />
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

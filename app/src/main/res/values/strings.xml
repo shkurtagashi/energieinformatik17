@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Energieinformatik17</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="about">About</string>
+
+    <string name="program_label"> Work *</string>
+    <string name="faculty_label"> Faculty</string>
+    <string name="age_label"> Age *</string>
+    <string name="status_label"> Status *</string>
+    <string name="course_label"> Course</string>
+    <string name="gender_label"> Gender *</string>
+    <string name="username_label">Username</string>
+    <string name="empatica_label">Empatica ID</string>
+    <string name="presenterQuestion">Are you presenting in the conference?</string>
+
+
+    <string name="emptyString"> </string>
+    <string name="selectItem">Select Item</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="teaching_experience_label">Teaching Experience</string>
+    <string name="terms_conditions_agreement">Consent Form </string>
+
+    <string name="professor">Professor</string>
+    <string name="post_doc">Post-doc</string>
+    <string name="phd_student">Ph.D. Student</string>
+    <string name="assistant">Assistant</string>
+    <string name="researcher">Researcher</string>
+    <string name="other">Other</string>
+
+    <string name="male">M</string>
+    <string name="female">F</string>
+    <string name="range20to30">20-30</string>
+    <string name="range30to40">30-40</string>
+    <string name="range40to50">40-50</string>
+    <string name="range50andAbove">50 and above</string>
+
+
+    <string name="informatics">Informatics</string>
+    <string name="economics">Economics</string>
+    <string name="communication_sciences">Communication Sciences</string>
+    <string name="academy_of_architecture">Academy of Architecture</string>
+
+    <string name="emptyLevel"> </string>
+    <string name="academia">Academia</string>
+    <string name="industry">Industry</string>
+
+
+    <string-array name="age_range_choices">
+        <item>@string/selectItem</item>
+        <item>@string/range20to30</item>
+        <item>@string/range30to40</item>
+        <item>@string/range40to50</item>
+        <item>@string/range50andAbove</item>
+    </string-array>
+
+    <string-array name="faculty_title_choices">
+        <item>@string/selectItem</item>
+        <item>@string/informatics</item>
+        <item>@string/economics</item>
+        <item>@string/communication_sciences</item>
+        <item>@string/academy_of_architecture</item>
+    </string-array>
+
+    <string-array name="work_title_choices">
+        <item>@string/selectItem</item>
+        <item>@string/academia</item>
+        <item>@string/industry</item>
+    </string-array>
+
+    <string-array name="status_choices">
+        <item>@string/selectItem</item>
+        <item>@string/professor</item>
+        <item>@string/post_doc</item>
+        <item>@string/phd_student</item>
+        <item>@string/assistant</item>
+        <item>@string/researcher</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
