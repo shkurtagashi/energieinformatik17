@@ -53,7 +53,7 @@ public class CustomAdapter extends BaseAdapter implements SmileRating.OnSmileySe
         view = inflter.inflate(R.layout.listview, null);
         TextView title = view.findViewById(R.id.paper_title);
         TextView author = view.findViewById(R.id.paper_author);
-        LinearLayout smileRate = view.findViewById(R.id.smile_rating);
+//        LinearLayout smileRate = view.findViewById(R.id.smile_rating);
 
 
         title.setText(paperTitlesOctober5[i]);
@@ -65,8 +65,8 @@ public class CustomAdapter extends BaseAdapter implements SmileRating.OnSmileySe
             if(sRating.getParent()!= null){
                 ((ViewGroup)sRating.getParent()).removeView(sRating);
             }
-            smileRate.addView(sRating);
-            smileRate.setId(j);
+//            smileRate.addView(sRating);
+//            smileRate.setId(j);
         }
 
         return view;

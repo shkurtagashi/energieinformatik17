@@ -26,11 +26,11 @@
             android:layout_gravity="center"
             android:padding="@dimen/activity_horizontal_margin" />
 
-        <LinearLayout
-            android:id="@+id/smile_rating"
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"/>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/smile_rating"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="2"-->
+            <!--android:layout_height="wrap_content"/>-->
 
     </LinearLayout>
 </LinearLayout>

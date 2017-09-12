@@ -73,6 +73,7 @@ public class InitialActivity extends AppCompatActivity {
         }
 
         cursor.close();
+        db.close();
         return exists;
     }
 }

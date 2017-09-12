@@ -13,9 +13,6 @@ import com.example.shkurtagashi.energieinformatik.Papers.FifthOctoberFragment;
 import com.example.shkurtagashi.energieinformatik.Papers.SixthOctoberFragment;
 import com.example.shkurtagashi.energieinformatik.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProgramFragmentPagerAdapter extends FragmentPagerAdapter {
 
 

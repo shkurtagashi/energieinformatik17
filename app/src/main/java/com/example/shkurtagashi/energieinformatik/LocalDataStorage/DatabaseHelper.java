@@ -160,6 +160,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(LOG_TAG, "Error while trying to add USER to database");
         } finally {
             db.endTransaction();
+            db.close();
         }
     }
 
@@ -185,6 +186,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(LOG_TAG, "Error while trying to add RATING to database");
         } finally {
             db.endTransaction();
+            db.close();
         }
     }
 

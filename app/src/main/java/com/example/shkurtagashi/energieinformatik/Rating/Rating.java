@@ -7,9 +7,13 @@ package com.example.shkurtagashi.energieinformatik.Rating;
 public class Rating {
 
     public String _paperId;
-    public String _ratingValue;
+    public int _ratingValue;
 
-    public Rating(String paperId, String ratingValue){
+    public Rating(){
+
+    }
+
+    public Rating(String paperId, int ratingValue){
         setPaperId(paperId);
         setRatingValue(ratingValue);
     }
@@ -22,11 +26,11 @@ public class Rating {
         return this._paperId;
     }
 
-    public String getRatingValue(){
+    public int getRatingValue(){
         return this._ratingValue;
     }
 
-    public void setRatingValue(String ratingValue) {
+    public void setRatingValue(int ratingValue) {
         this._ratingValue = ratingValue;
     }
 }

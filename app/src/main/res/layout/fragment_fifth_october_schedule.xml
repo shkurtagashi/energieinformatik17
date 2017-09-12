@@ -13,8 +13,8 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
-            android:background="#607D8B"
-            android:padding="5dp">
+            android:background="@color/primary_material_light"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -32,7 +32,8 @@
             android:id="@+id/tableRow2"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -46,30 +47,38 @@
                 android:text="Conference opening" />
         </TableRow>
 
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_height="wrap_content"
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
-            <TextView
-                android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/tableRow3"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9:00 – 10:00"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="Keynote by Prof. Kamin Whitehouse" />
-        </TableRow>
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="9:00 – 10:00"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/accent_material_light"
+                    android:text="Keynote by Prof. Kamin Whitehouse" />
+            </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -83,11 +92,17 @@
                 android:text="Coffee break" />
         </TableRow>
 
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <TableRow
             android:id="@+id/tableRow5"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -98,14 +113,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/accent_material_light"
                 android:text="Paper Session 1" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow6"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -123,7 +141,8 @@
             android:id="@+id/tableRow7"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -137,11 +156,17 @@
                 android:text="Lunch + Poster and Demo Session" />
         </TableRow>
 
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow8"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -152,14 +177,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/accent_material_light"
                 android:text="Paper Session 2" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow9"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -173,11 +201,13 @@
                 android:text="Tools and Methods Workshop*" />
         </TableRow>
 
+
         <TableRow
             android:id="@+id/tableRow10"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -191,11 +221,17 @@
                 android:text="Coffee break" />
         </TableRow>
 
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <TableRow
             android:id="@+id/tableRow11"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -206,13 +242,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/accent_material_light"
                 android:text="Paper Session 3" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
+
         <TableRow
             android:id="@+id/tableRow12"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -230,7 +270,8 @@
             android:id="@+id/tableRow13"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

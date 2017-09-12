@@ -12,7 +12,9 @@
             android:id="@+id/tableRow11"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:background="@color/primary_material_light">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -26,11 +28,13 @@
                 android:text="Event" />
         </TableRow>
 
+
         <TableRow
             android:id="@+id/tableRow22"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -45,29 +49,38 @@
         </TableRow>
 
 
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow33"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="9:00 – 10:00"
                 />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Keynote by Wolfgang Korosec" />
+                android:text="Keynote by Wolfgang Korosec"
+                android:textColor="@color/accent_material_light" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow44"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -81,11 +94,17 @@
                 android:text="Coffee break" />
         </TableRow>
 
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow55"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,14 +115,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/accent_material_light"
                 android:text="Paper Session 4" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow66"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -117,11 +139,17 @@
                 android:text="Lunch" />
         </TableRow>
 
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow77"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -132,14 +160,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textColor="@color/accent_material_light"
                 android:text="Paper Session 5" />
         </TableRow>
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <TableRow
             android:id="@+id/tableRow88"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:padding="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

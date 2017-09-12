@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:expandable="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.shkurtagashi.energieinformatik.Papers.PapersActivity" >
 
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/papers_data_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/papers_data_tab_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"/>-->
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager2"
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+
+    <!--<com.andexert.expandablelayout.library.ExpandableLayout-->
+        <!--android:id="@+id/explandableLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--expandable:headerLayout="@layout/view_header"-->
+        <!--expandable:contentLayout="@layout/view_content"/>-->
+
+
+    <!--android:background="@color/colorAccent"-->
+
+    <!--<com.andexert.expandablelayout.library.ExpandableLayoutListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_below="@+id/explandableLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/expandableLayout1"
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        expandable:headerLayout="@layout/view_header"
+        expandable:contentLayout="@layout/view_content"/>
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/expandableLayout2"
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:headerLayout="@layout/view_header2"
+        expandable:contentLayout="@layout/view_content2"/>
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/expandableLayout3"
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:headerLayout="@layout/view_header3"
+        expandable:contentLayout="@layout/view_content3"/>
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/expandableLayout4"
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:headerLayout="@layout/view_header4"
+        expandable:contentLayout="@layout/view_content4"/>
+
+    <com.andexert.expandablelayout.library.ExpandableLayout
+        android:id="@+id/expandableLayout5"
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:headerLayout="@layout/view_header5"
+        expandable:contentLayout="@layout/view_content5"/>
 
 </LinearLayout>
