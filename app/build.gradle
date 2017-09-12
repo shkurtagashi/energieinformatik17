@@ -30,7 +30,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:26.+'
     compile 'com.roughike:swipe-selector:1.0.6'
-    compile 'com.github.traex.expandablelayout:library:1.2.2'
+    compile 'com.github.aakira:expandable-layout:1.4.2@aar'
     compile 'com.balysv:material-ripple:1.0.2'
     testCompile 'junit:junit:4.12'
 }

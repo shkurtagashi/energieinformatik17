@@ -12,11 +12,15 @@
             android:layout_weight="2"
             />
 
-        <com.hsalf.smilerating.SmileRating
-            android:id="@+id/smile_rating1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+       <RatingBar
+           android:id="@+id/star_rating1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           style="@style/starRatingBar"
+           android:numStars="2"
+           android:rating="0.0"
+           android:stepSize="1"/>
 
         <Button
             android:id="@+id/rateButton1"

@@ -6,31 +6,31 @@ package com.example.shkurtagashi.energieinformatik.Rating;
 
 public class Rating {
 
-    public String _paperId;
-    public int _ratingValue;
+    public int _paperId;
+    public float _ratingValue;
 
     public Rating(){
 
     }
 
-    public Rating(String paperId, int ratingValue){
+    public Rating(int paperId, float ratingValue){
         setPaperId(paperId);
         setRatingValue(ratingValue);
     }
 
-    public void setPaperId(String paperId) {
+    public void setPaperId(int paperId) {
         this._paperId = paperId;
     }
 
-    public String getPaperId(){
+    public int getPaperId(){
         return this._paperId;
     }
 
-    public int getRatingValue(){
+    public float getRatingValue(){
         return this._ratingValue;
     }
 
-    public void setRatingValue(int ratingValue) {
+    public void setRatingValue(float ratingValue) {
         this._ratingValue = ratingValue;
     }
 }
