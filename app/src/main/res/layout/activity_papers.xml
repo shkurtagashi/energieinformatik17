@@ -2,12 +2,9 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:expandable="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -55,27 +52,44 @@
 
         <com.roughike.swipeselector.SwipeSelector
             android:id="@+id/paper_selector1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
             />
 
-        <RatingBar
-            android:id="@+id/star_rating1"
-            android:layout_below="@id/paper_selector1"
+        <TextView
+            android:id="@+id/ratePaperPlease"
+            android:layout_below="@+id/paper_selector1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/starRatingBar"
-            android:gravity="center"
-            android:numStars="7"
-            android:rating="0.0"
-            android:stepSize="0.5"/>
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Could you please rate this presentation?"/>
 
-        <Button
-            android:id="@+id/rateButton1"
-            android:layout_below="@id/star_rating1"
+        <RatingBar
+            android:id="@+id/star_rating1"
+            android:layout_below="@id/ratePaperPlease"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/starRatingBar"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Rate Paper"/>
+            android:layout_below="@id/star_rating1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rateButton1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit Rating"/>
+
+        </LinearLayout>
 
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
@@ -111,23 +125,40 @@
             android:layout_height="150dp"
             />
 
-        <RatingBar
-            android:id="@+id/star_rating2"
-            android:layout_below="@id/paper_selector2"
+        <TextView
+            android:id="@+id/ratePaperPlease2"
+            android:layout_below="@+id/paper_selector2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/starRatingBar"
-            android:gravity="center"
-            android:numStars="7"
-            android:rating="0.0"
-            android:stepSize="0.5"/>
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ratePresentation"/>
 
-        <Button
-            android:id="@+id/rateButton2"
-            android:layout_below="@id/star_rating2"
+        <RatingBar
+            android:id="@+id/star_rating2"
+            android:layout_below="@id/ratePaperPlease2"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/starRatingBar"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Rate Paper"/>
+            android:layout_below="@id/star_rating2"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rateButton2"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submitRating"/>
+
+        </LinearLayout>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
     <Button
@@ -161,23 +192,40 @@
             android:layout_height="150dp"
             />
 
-        <RatingBar
-            android:id="@+id/star_rating3"
-            android:layout_below="@id/paper_selector3"
+        <TextView
+            android:id="@+id/ratePaperPlease3"
+            android:layout_below="@+id/paper_selector3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/starRatingBar"
-            android:gravity="center"
-            android:numStars="7"
-            android:rating="0.0"
-            android:stepSize="0.5"/>
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ratePresentation"/>
 
-        <Button
-            android:id="@+id/rateButton3"
-            android:layout_below="@id/star_rating3"
+        <RatingBar
+            android:id="@+id/star_rating3"
+            android:layout_below="@id/ratePaperPlease3"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/starRatingBar"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Rate Paper"/>
+            android:layout_below="@id/star_rating3"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rateButton3"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submitRating"/>
+
+        </LinearLayout>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
@@ -212,23 +260,40 @@
             android:layout_height="150dp"
             />
 
-        <RatingBar
-            android:id="@+id/star_rating4"
-            android:layout_below="@id/paper_selector4"
+        <TextView
+            android:id="@+id/ratePaperPlease4"
+            android:layout_below="@+id/paper_selector4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/starRatingBar"
-            android:gravity="center"
-            android:numStars="7"
-            android:rating="0.0"
-            android:stepSize="0.5"/>
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ratePresentation"/>
 
-        <Button
-            android:id="@+id/rateButton4"
-            android:layout_below="@id/star_rating4"
+        <RatingBar
+            android:id="@+id/star_rating4"
+            android:layout_below="@id/ratePaperPlease4"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/starRatingBar"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Rate Paper"/>
+            android:layout_below="@id/star_rating4"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rateButton4"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submitRating"/>
+
+        </LinearLayout>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
@@ -263,27 +328,45 @@
             android:layout_height="150dp"
             />
 
-        <RatingBar
-            android:id="@+id/star_rating5"
-            android:layout_below="@id/paper_selector5"
+        <TextView
+            android:id="@+id/ratePaperPlease5"
+            android:layout_below="@+id/paper_selector5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/starRatingBar"
-            android:gravity="center"
-            android:numStars="7"
-            android:rating="0.0"
-            android:stepSize="0.5"/>
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ratePresentation"/>
 
-        <Button
-            android:id="@+id/rateButton5"
-            android:layout_below="@id/star_rating5"
+        <RatingBar
+            android:id="@+id/star_rating5"
+            android:layout_below="@id/ratePaperPlease5"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/starRatingBar"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Rate Paper"/>
+            android:layout_below="@id/star_rating5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rateButton5"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submitRating"/>
+
+        </LinearLayout>
 
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
 </RelativeLayout>
+
+
 
 </ScrollView>
 

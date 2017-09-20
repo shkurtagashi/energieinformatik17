@@ -6,6 +6,7 @@ package com.example.shkurtagashi.energieinformatik.Rating;
 
 public class Rating {
 
+
     public int _paperId;
     public float _ratingValue;
 

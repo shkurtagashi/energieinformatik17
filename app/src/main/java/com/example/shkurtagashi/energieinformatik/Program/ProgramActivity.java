@@ -5,7 +5,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.shkurtagashi.energieinformatik.Papers.PapersFragmentPagerAdapter;
 import com.example.shkurtagashi.energieinformatik.R;
 
 public class ProgramActivity extends AppCompatActivity {

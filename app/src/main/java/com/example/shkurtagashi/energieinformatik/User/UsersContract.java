@@ -19,7 +19,7 @@ public final class UsersContract {
          */
         public final static String TABLE_NAME_USERS = "usersTable";
 
-        public final static String _ID = "id";
+        public final static String _ID = BaseColumns._ID;
         public final static String ANDROID_ID = "android_id";
         public final static String USERNAME = "username";
         public final static String EMPATICAID = "empatica_id";

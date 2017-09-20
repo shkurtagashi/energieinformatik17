@@ -6,8 +6,11 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 import android.util.Log;
 
+import com.example.shkurtagashi.energieinformatik.Papers.Survey;
+import com.example.shkurtagashi.energieinformatik.Papers.SurveyContract;
 import com.example.shkurtagashi.energieinformatik.User.UsersContract;
 
 import java.util.ArrayList;
@@ -20,6 +23,9 @@ import com.example.shkurtagashi.energieinformatik.Rating.RatingContract;
 import com.example.shkurtagashi.energieinformatik.Rating.RatingContract.RatingEntry;
 import com.example.shkurtagashi.energieinformatik.Rating.Rating;
 
+import com.example.shkurtagashi.energieinformatik.Papers.SurveyContract;
+import com.example.shkurtagashi.energieinformatik.Papers.SurveyContract.SurveyEntry;
+
 
 
 
@@ -30,13 +36,14 @@ import com.example.shkurtagashi.energieinformatik.Rating.Rating;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String LOG_TAG = DatabaseHelper.class.getSimpleName();
 
+
     /**
      * Database version. If you change the database schema, you must increment the database version.
      */
     private static final int DATABASE_VERSION = 1;
 
     /** Name of the database file */
-    private static final String DATABASE_NAME = "teacher.db";
+    private static final String DATABASE_NAME = "energieinformatik.db";
 
     // Table Create Statements
     // String that contains the SQL statement to create the Users table
@@ -53,9 +60,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // String that contains the SQL statement to create the Ratings table
     private static final String SQL_CREATE_RATINGS_TABLE = "CREATE TABLE " + RatingEntry.TABLE_NAME_RATINGS + " ("
-            + RatingEntry.PAPER_ID + " INTEGER PRIMARY KEY, "
+            + RatingEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + RatingEntry.PAPER_ID + " INTEGER, "
             + RatingEntry.RATING_VALUE + " TEXT);";
 
+
+    // String that contains the SQL statement to create the General Survey data table
+    private static final String SQL_CREATE_SURVEY_DATA_TABLE = "CREATE TABLE "+ SurveyEntry.TABLE_NAME_SURVEY + "("
+            + SurveyEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + SurveyEntry.TIMESTAMP + " REAL, "
+            + SurveyEntry.PAPER_ID + " INTEGER, "
+            + SurveyEntry.QUESTION_1 + " TEXT, "
+            + SurveyEntry.QUESTION_2 + " TEXT, "
+            + SurveyEntry.QUESTION_3 + " TEXT, "
+            + SurveyEntry.QUESTION_4 + " TEXT, "
+            + SurveyEntry.QUESTION_5 + " TEXT, "
+            + SurveyEntry.QUESTION_6 + " TEXT, "
+            + SurveyEntry.QUESTION_7 + " TEXT" + ")";
 
     /**
      * Constructs a new instance of {@link DatabaseHelper}.
@@ -75,6 +96,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Execute the SQL statements
         db.execSQL(SQL_CREATE_USERS_TABLE);
         db.execSQL(SQL_CREATE_RATINGS_TABLE);
+        db.execSQL(SQL_CREATE_SURVEY_DATA_TABLE);
+
 
 //        insertRecords(db, UploaderUtilityTable.TABLE_UPLOADER_UTILITY, UploaderUtilityTable.getRecords());
 
@@ -167,7 +190,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     /*
     Add a rating into Ratings table
  */
-    public void addRating(Rating rating) {
+    public void addRating(Rating rating, Context context) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.beginTransaction();
 
@@ -180,10 +203,46 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.insertOrThrow(RatingEntry.TABLE_NAME_RATINGS, null, values);
             db.setTransactionSuccessful();
+
             System.out.println("Rating DATA INSERTED: "+ values);
         } catch (SQLException e) {
             e.printStackTrace();
             Log.d(LOG_TAG, "Error while trying to add RATING to database");
+        } finally {
+            db.endTransaction();
+            db.close();
+        }
+    }
+
+
+    /*
+        Add a SURVEY into Surveys table
+    */
+    public void addSurvey(Survey survey, Context context) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.beginTransaction();
+
+        try {
+            ContentValues values = new ContentValues();
+
+            values.put(SurveyEntry.TIMESTAMP, survey.getTimestamp());
+            values.put(SurveyEntry.PAPER_ID, survey.getPaperId());
+            values.put(SurveyEntry.QUESTION_1, survey.getQuestion1());
+            values.put(SurveyEntry.QUESTION_2, survey.getQuestion2());
+            values.put(SurveyEntry.QUESTION_3, survey.getQuestion3());
+            values.put(SurveyEntry.QUESTION_4, survey.getQuestion4());
+            values.put(SurveyEntry.QUESTION_5, survey.getQuestion5());
+            values.put(SurveyEntry.QUESTION_6, survey.getQuestion6());
+            values.put(SurveyEntry.QUESTION_7, survey.getQuestion7());
+
+
+            db.insertOrThrow(SurveyEntry.TABLE_NAME_SURVEY, null, values);
+            db.setTransactionSuccessful();
+
+            System.out.println("Survey DATA INSERTED: "+ values);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.d(LOG_TAG, "Error while trying to add SURVEY to database");
         } finally {
             db.endTransaction();
             db.close();

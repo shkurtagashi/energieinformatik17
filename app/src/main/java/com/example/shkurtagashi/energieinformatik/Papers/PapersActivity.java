@@ -1,20 +1,20 @@
 package com.example.shkurtagashi.energieinformatik.Papers;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.example.shkurtagashi.energieinformatik.LocalDataStorage.DatabaseHelper;
 import com.example.shkurtagashi.energieinformatik.R;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
-import com.hsalf.smilerating.BaseRating;
-import com.hsalf.smilerating.SmileRating;
 import com.roughike.swipeselector.SwipeItem;
 import com.roughike.swipeselector.SwipeSelector;
 import com.example.shkurtagashi.energieinformatik.Rating.Rating;
@@ -23,34 +23,17 @@ public class PapersActivity extends AppCompatActivity {
 
     private static final String TAG = "PapersActivity";
 
-    private SmileRating mSmileRating;
 
-    String[] paperTitlesOctober5 = {"Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices 1","Title 2","Title 3","Title 4","Title 5","Title 6","Title 7","Title 8","Title 9","Title 10"};
-    String[] paperAuthorsOctober5 = {"Shkurta F. Gashi","Author 2","Author 3","Author 4","Author 5","Author 6","Author 7","Author 8","Author 9","Author 10"};
+    Button rateButton1, rateButton2, rateButton3, rateButton4, rateButton5;
 
-//    private final static String[] sessions = {"Session 1", "Session 2", "Session 3","Session 4","Session 5"};
-    ListView listView;
-
-    Button rateButton1;
-    Button rateButton2;
-    Button rateButton3;
-    Button rateButton4;
-    Button rateButton5;
-
-    SwipeSelector swipeSelector1;
-    SwipeSelector swipeSelector2;
-    SwipeSelector swipeSelector3;
-    SwipeSelector swipeSelector4;
-    SwipeSelector swipeSelector5;
-
-    RatingBar ratingBar1;
+    SwipeSelector swipeSelector1, swipeSelector2, swipeSelector3, swipeSelector4, swipeSelector5;
+    RatingBar ratingBar1, ratingBar2, ratingBar3, ratingBar4, ratingBar5;
 
     Rating r;
 
     ExpandableRelativeLayout expandableLayout1, expandableLayout2, expandableLayout3, expandableLayout4, expandableLayout5;
-
-
     DatabaseHelper dbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,38 +45,58 @@ public class PapersActivity extends AppCompatActivity {
 
         rateButton1 = (Button) findViewById(R.id.rateButton1);
         swipeSelector1 =(SwipeSelector) findViewById(R.id.paper_selector1);
-        ratingBar1 = (RatingBar) findViewById(R.id.star_rating1) ;
+        ratingBar1 = (RatingBar) findViewById(R.id.star_rating1);
+//        surveyButton1 = (Button) findViewById(R.id.surveyButton1);
 
         rateButton2 = (Button) findViewById(R.id.rateButton2);
         swipeSelector2 =(SwipeSelector) findViewById(R.id.paper_selector2);
+        ratingBar2 = (RatingBar) findViewById(R.id.star_rating2);
+
 
         rateButton3 = (Button) findViewById(R.id.rateButton3);
         swipeSelector3 =(SwipeSelector) findViewById(R.id.paper_selector3);
+        ratingBar3 = (RatingBar) findViewById(R.id.star_rating3);
+
 
         rateButton4 = (Button) findViewById(R.id.rateButton4);
         swipeSelector4 =(SwipeSelector) findViewById(R.id.paper_selector4);
+        ratingBar4 = (RatingBar) findViewById(R.id.star_rating4);
+
 
         rateButton5 = (Button) findViewById(R.id.rateButton5);
         swipeSelector5 =(SwipeSelector) findViewById(R.id.paper_selector5);
-        
+        ratingBar5 = (RatingBar) findViewById(R.id.star_rating5);
+
         setUpSwipeSelectors();
+        setUpButtonListeners(rateButton1, swipeSelector1, ratingBar1);
+        setUpButtonListeners(rateButton2, swipeSelector2, ratingBar2);
+        setUpButtonListeners(rateButton3, swipeSelector3, ratingBar3);
+        setUpButtonListeners(rateButton4, swipeSelector4, ratingBar4);
+        setUpButtonListeners(rateButton5, swipeSelector5, ratingBar5);
 
-        rateButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SwipeItem selectedItem = swipeSelector1.getSelectedItem();
-                int paperId =  (Integer) selectedItem.value;
-
-                Log.v("Fifth frag", "Selected Rating:  " + ratingBar1.getRating() + "\n \n Selected Paper: " + paperId);
-
-                Rating r = new Rating();
-                r.setPaperId(paperId);
-                r.setRatingValue(ratingBar1.getRating());
-                dbHelper.addRating(r);
-            }
-        });
     }
 
+    /**
+     *
+     */
+    private void setUpButtonListeners(Button b, final SwipeSelector s, final RatingBar rb){
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SwipeItem selectedItem = s.getSelectedItem();
+                int paperId =  (Integer) selectedItem.value;
+
+                Log.v("PapersActivity", "Selected Rating:  " + rb.getRating() + "\n \n Selected Paper: " + paperId);
+
+                r.setPaperId(paperId);
+                r.setRatingValue(rb.getRating());
+
+                feedbackMessage();
+
+            }
+        });
+
+    }
 
     private void setUpSwipeSelectors(){
         swipeSelector1.setItems(
@@ -101,43 +104,50 @@ public class PapersActivity extends AppCompatActivity {
                 // current SwipeSelector, just as you would assign values to radio buttons.
                 // You can use the value later on to check what the selected item was.
                 // The value can be any Object, here we're using ints.
-                new SwipeItem(0, "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices", "Shkurta Gashi, Elena Di Lascio "),
-                new SwipeItem(1, "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices", "Shkurta Gashi, Elena Di Lascio "),
-                new SwipeItem(2, "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices", "Shkurta Gashi, Elena Di Lascio "),
-                new SwipeItem(3, "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices", "Shkurta Gashi, Elena Di Lascio ")
+                new SwipeItem(1, "Using Locally Produced Photovoltaic Energy to Charge Electric Vehicles", "René Buffat"),
+                new SwipeItem(2, "Modeling and Simulation of Local Flexibilities and their Effect to the Entire Power System", "Lukas Exel"),
+                new SwipeItem(3, "Including a Virtual Battery Storage into Thermal Unit Commitment", "David Steber"),
+                new SwipeItem(4, "Smart Grid Co-Simulation with MOSAIK and HLA: A Comparison Study", "Cornelius Steinbrink"),
+                new SwipeItem(5, "Result processing approaches for large smart grid co-simulations", "Frank Marten")
+
         );
 
 
         swipeSelector2.setItems(
-                new SwipeItem(4, "Paper 2", "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices"),
-                new SwipeItem(5, "Paper two", "Description for slide two."),
-                new SwipeItem(6, "Paper three", "Description for slide three."),
-                new SwipeItem(7, "Paper three", "Description for slide three.")
+                new SwipeItem(6, "NIWM: Non-intrusive water monitoring to uncover heat energy use in households", "Samuel Schöb"),
+                new SwipeItem(7, "PROMT: Predicting Occupancy Presence in Multiple Resolution with Time Shift Agnostic Classification", "Fisayo Caleb Sangogboye"),
+                new SwipeItem(8, "Exploring Zero-Training Algorithms for Occupancy Detection based on Smart Meter Measurements", "Vincent Becker"),
+                new SwipeItem(9, "Phase preserving Profile Generation from Measurement Data by Clustering and Performance Analysis", "Paul Zehetbauer")
 
-        );
+                );
 
 
         swipeSelector3.setItems(
-                new SwipeItem(8, "Paper 3", "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices"),
-                new SwipeItem(9, "Paper two", "Description for slide two."),
-                new SwipeItem(10, "Paper three", "Description for slide three."),
-                new SwipeItem(11, "Paper three", "Description for slide three.")
+                new SwipeItem(10, "Automated Deserializer Generation from CIM Ontologies", "Lukas Razik"),
+                new SwipeItem(11, "Integrating distribution system operator system landscapes", "Dominik Ascher"),
+                new SwipeItem(12, "A Comprehensive Modelling Framework for Demand Side Flexibility in Smart Grids", "Nicole Ludwig"),
+                new SwipeItem(13, "Efficiently Solving DSM Problems - Are We There Yet?", "Florian Salah"),
+                new SwipeItem(14, "A Threat Analysis of the Vehicle-to-Grid Charging Protocol ISO 15118", "Kaibin Bao")
 
         );
 
         swipeSelector4.setItems(
-                new SwipeItem(12, "Paper 3", "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices"),
-                new SwipeItem(13, "Paper two", "Description for slide two."),
-                new SwipeItem(14, "Paper three", "Description for slide three."),
-                new SwipeItem(15, "Paper three", "Description for slide three.")
+
+                new SwipeItem(15, "Privacy-preserving Blockchain-based Electric Vehicle Charging with Dynamic Tariff Decisions", "Fabian Knirsch"),
+                new SwipeItem(16, "A Blockchain-Based Smart Grid: Towards Sustainable Local Energy Markets", "Esther Mengelkamp"),
+                new SwipeItem(17, "Exploiting Flexibility in Smart Grids at Scale", "Lukas Barth"),
+                new SwipeItem(18, "Using Demand Side Management and CHP in renewable dominated decentral energy systems", "Niklas Hartmann")
 
         );
 
         swipeSelector5.setItems(
-                new SwipeItem(16, "Paper 3", "Studying Physiological Synchrony Between Teachers and Students using Mobile and Wearable Devices"),
-                new SwipeItem(17, "Paper two", "Description for slide two."),
-                new SwipeItem(18, "Paper three", "Description for slide three."),
-                new SwipeItem(19, "Paper three", "Description for slide three.")
+                new SwipeItem(19, "Economic nonlinear MPC for a population of thermostatically controlled loads", "Nikita Zemtsov"),
+                new SwipeItem(20, "Understanding Price Functions to Control Domestic Electric Water Heaters for Demand Response", "Tobias Lübkert"),
+                new SwipeItem(21, "Provision of Frequency Containment Reserve with an Aggregate of Air Handling Units", "Julian Rominger"),
+                new SwipeItem(22, "A Market-Based Smart Grid Approach to Doubling the Power Grid Capacity Without Physical Grid Expansion", "Gwendolin Wilke"),
+                new SwipeItem(23, "Shaping aggregated load profiles based on optimized local scheduling of home appliances", "Christoph Hunziker")
+
+
 
         );
 
@@ -166,5 +176,39 @@ public class PapersActivity extends AppCompatActivity {
     public void expandableButton5(View view) {
         expandableLayout5 = (ExpandableRelativeLayout) findViewById(R.id.expandableLayout5);
         expandableLayout5.toggle(); // toggle expand and collapse
+    }
+
+
+    public void feedbackMessage(){
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(PapersActivity.this);
+        alertDialog.setTitle("Rating Paper");
+        alertDialog.setMessage("Are you sure you want to save the rating for this paper?");
+        alertDialog.setIcon(R.drawable.logo);
+
+        alertDialog.setNegativeButton(R.string.yes,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dbHelper.addRating(r, getApplicationContext());
+                        Toast.makeText(getApplicationContext(), "Thank you!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), SurveyActivity.class);
+
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("paperID", r.getPaperId());
+                        Log.v("PapersAct", r.getPaperId()+"");
+                        intent.putExtras(bundle);
+
+                        startActivity(intent);
+                    }
+                });
+
+        alertDialog.setPositiveButton(R.string.no,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+        alertDialog.show();
     }
 }

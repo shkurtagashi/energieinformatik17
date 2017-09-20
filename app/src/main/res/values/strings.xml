@@ -50,6 +50,24 @@
     <string name="academia">Academia</string>
     <string name="industry">Industry</string>
 
+    <string name="activePassiveQuestion">Did you ask any question during this presentation?</string>
+    <string name="favorableMoment">Is there any favorable moment during this presentation? If yes, please describe it.</string>
+    <string name="enjoyment1">The presentation was interesting</string>
+    <string name="enjoyment2">The presentation was interesting</string>
+    <string name="enjoyment3">The presentation was interesting</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+
+    <string name="ratePresentation">Could you please rate this presentation?</string>
+    <string name="submitRating">Submit Rating</string>
+
+
 
     <string-array name="age_range_choices">
         <item>@string/selectItem</item>

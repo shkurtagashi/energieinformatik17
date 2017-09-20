@@ -19,6 +19,7 @@ public final class RatingContract {
          */
         public final static String TABLE_NAME_RATINGS = "ratingsTable";
 
+        public final static String _ID = BaseColumns._ID;
         public final static String PAPER_ID = "paperId";
         public final static String RATING_VALUE = "ratingValue";
 
@@ -30,7 +31,7 @@ public final class RatingContract {
 
 
         public static String[] getColumns(){
-            String[] columns = {PAPER_ID, RATING_VALUE};
+            String[] columns = {_ID, PAPER_ID, RATING_VALUE};
 
             return columns;
         }

@@ -5,5 +5,8 @@ package com.example.shkurtagashi.energieinformatik.LocalDataStorage;
  */
 
 public enum LocalTables {
-    TABLE_NAME_USERS
+    TABLE_NAME_USERS,
+    TABLE_NAME_SURVEY,
+    TABLE_NAME_RATINGS
+
 }

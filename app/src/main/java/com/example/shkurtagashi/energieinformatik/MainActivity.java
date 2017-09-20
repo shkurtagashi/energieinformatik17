@@ -1,5 +1,8 @@
 package com.example.shkurtagashi.energieinformatik;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -8,23 +11,37 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
 
 import com.example.shkurtagashi.energieinformatik.Papers.PapersActivity;
 import com.example.shkurtagashi.energieinformatik.Program.ProgramActivity;
+import com.example.shkurtagashi.energieinformatik.Reminders.FinalScheduler;
+import com.example.shkurtagashi.energieinformatik.Reminders.Weekday;
+import com.example.shkurtagashi.energieinformatik.RemoteDataStorage.UploadAlarmReceiver;
 import com.example.shkurtagashi.energieinformatik.Speakers.SpeakersActivity;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     protected DrawerLayout drawerLayout;
     private Toolbar toolbar;
-    protected FrameLayout frameLayout;
     protected NavigationView navigationView;
-    public View contentMain;
+
+    Calendar calendar;
+    String weekday;
+    SimpleDateFormat dayFormat;
+    int month;
+    int dayOfMonth;
+    FinalScheduler scheduler;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        triggerReminders();
+        uploadDataEveryday();
 
     }
 
@@ -104,4 +124,48 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void triggerReminders(){
+        dayFormat = new SimpleDateFormat("EEEE", Locale.US);
+        calendar = Calendar.getInstance();
+        weekday = dayFormat.format(calendar.getTime());
+        scheduler = new FinalScheduler();
+        month = calendar.get(Calendar.MONTH);
+        dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+        //January - 0
+        if((month == Calendar.SEPTEMBER && dayOfMonth >= 18 && dayOfMonth <= 30) || (month == Calendar.OCTOBER && dayOfMonth >= 1 && dayOfMonth <= 6)){
+                Log.v("Homeee", "Alarms Triggered");
+            scheduler.createReminder(getApplicationContext());
+        }
+    }
+
+    public void uploadDataEveryday(){
+
+        // Retrieve a PendingIntent that will perform a broadcast
+        Intent intent = new Intent(getApplicationContext(), UploadAlarmReceiver.class);
+        AlarmManager am = (AlarmManager) getSystemService(getApplicationContext().ALARM_SERVICE);
+
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 17);
+        cal.set(Calendar.MINUTE, 17);
+        cal.set(Calendar.SECOND, 0);
+
+        if (cal.getTimeInMillis() > System.currentTimeMillis()) { //if it is more than 19:00 o'clock, trigger it tomorrow
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.GERMANY);
+
+            String time = sdf.format(new Date());
+            System.out.println(time + ": Upload alarm triggered for today");
+
+            am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_ONE_SHOT));
+        } else {
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.GERMANY);
+            Log.v("HOMEEE", "Upload Alarm Triggered for next day");
+            cal.add(Calendar.DAY_OF_MONTH, 1); //trigger alarm tomorrow
+
+            am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_ONE_SHOT));
+        }
+    }
 }
+

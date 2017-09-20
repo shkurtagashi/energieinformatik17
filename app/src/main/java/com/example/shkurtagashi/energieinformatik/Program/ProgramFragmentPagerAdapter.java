@@ -1,17 +1,9 @@
 package com.example.shkurtagashi.energieinformatik.Program;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.shkurtagashi.energieinformatik.Papers.FifthOctoberFragment;
-import com.example.shkurtagashi.energieinformatik.Papers.SixthOctoberFragment;
-import com.example.shkurtagashi.energieinformatik.R;
 
 public class ProgramFragmentPagerAdapter extends FragmentPagerAdapter {
 

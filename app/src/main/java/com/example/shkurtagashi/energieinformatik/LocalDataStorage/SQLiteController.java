@@ -24,7 +24,7 @@ public class SQLiteController implements LocalStorageController {
         dbHelper = new DatabaseHelper(context);
         localDb = dbHelper.getReadableDatabase();
         this.context = context;
-        this.dbName = "teacher";
+        this.dbName = "energieinformatik.db";
     }
 
     @Override
