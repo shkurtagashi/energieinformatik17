@@ -11,6 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 import com.example.shkurtagashi.energieinformatik.Papers.PapersActivity;
+import com.example.shkurtagashi.energieinformatik.Papers.PapersFragment;
 import com.example.shkurtagashi.energieinformatik.R;
 
 import java.util.Calendar;
@@ -24,43 +25,16 @@ public class AlarmNotificationReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
-        String course = intent.getExtras().get("course").toString();
-        String questionnaire = intent.getExtras().get("questionnaire").toString();
-        System.out.println("Course: "+intent.getExtras().get("course"));
-        System.out.println("Questionnaire: "+intent.getExtras().get("questionnaire"));
         System.out.println("I am in receiver!");
 
-        //here for each case we need to reschedule the alarm for next week, and set the notification
+        String session = intent.getExtras().get("Session").toString();
 
-        if(course.equals("")){
-            if(questionnaire.equals("Session1")){
-                setAlarm(context, "", "Session1", 61);
-                setNotification(context, "", "Session1", 1000, "Survey Time", "Time to answer questionnaire!", 1000);
-            }
-
-            if(questionnaire.equals("Session2")){
-                setAlarm(context, "", "Session2", 64);
-                setNotification(context, "", "Session2", 4000, "Survey Time", "Time to answer questionnaire!", 4000);
-            }
-
-        }
-
+        setNotification(context, "Survey Time", "Please don't forget to rate presentations of " + session + "!", 1000098);
     }
 
 
-    public void setAlarm(Context context, String course, String questionnaire, int requestCode){
 
-        Intent myIntent = new Intent(context, AlarmNotificationReceiver.class);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        myIntent.putExtra("course", course);
-        myIntent.putExtra("questionnaire", questionnaire);
-        PendingIntent pendingIntent1 = PendingIntent.getBroadcast(context, requestCode, myIntent, PendingIntent.FLAG_ONE_SHOT);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+604800000, pendingIntent1); //604 800 000 (7 days)
-        System.out.println("alarm set for the future");
-    }
-
-    public void setNotification(Context context, String course, String questionnaire, int requestCode, String title, String content, int notificationID){
+    public void setNotification(Context context, String title, String content, int notificationID){
         Random rand = new Random();
         int code = rand.nextInt(100000000);
         System.out.println("code: "+code);
@@ -69,12 +43,10 @@ public class AlarmNotificationReceiver extends BroadcastReceiver {
         builder.setContentTitle(title);
         builder.setContentText(content);
         builder.setDefaults(Notification.DEFAULT_SOUND);
-        builder.setAutoCancel(true);
+        builder.setAutoCancel(false);
 
 
         Intent intent = new Intent(context, PapersActivity.class);
-        intent.putExtra("questionnaire", questionnaire);
-        intent.putExtra("course", course);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addParentStack(PapersActivity.class);

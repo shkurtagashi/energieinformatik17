@@ -28,15 +28,19 @@ import java.util.Random;
 
 public class FinalScheduler {
 
-    /* Creation of the courses - BEGIN */
+    /* Creation of the SESSIONS - BEGIN */
 
-    //Linear Algebra on Monday and  Wednesday from 8:30 until 10:15
-    public Weekday session1 = new Weekday(17, 34, Calendar.TUESDAY);
-    public Weekday session2 = new Weekday(17, 35, Calendar.TUESDAY);
-    public Weekday session3 = new Weekday(15, 25, Calendar.TUESDAY);
+    public Weekday session1 = new Weekday(11, 59, Calendar.MONDAY);
+    public Weekday session2 = new Weekday(15, 59, Calendar.MONDAY);
+    public Weekday session3 = new Weekday(17, 59, Calendar.MONDAY);
+    public Weekday session4 = new Weekday(11, 59, Calendar.TUESDAY);
+    public Weekday session5 = new Weekday(14, 59, Calendar.TUESDAY);
 
-    public Weekday session4 = new Weekday(10, 55, Calendar.TUESDAY);
-    public Weekday session5 = new Weekday(10, 25, Calendar.TUESDAY);
+//    private Weekday session1 = new Weekday(15, 55, Calendar.FRIDAY);
+//    private Weekday session2 = new Weekday(15, 56, Calendar.FRIDAY);
+//    private Weekday session3 = new Weekday(15, 57, Calendar.FRIDAY);
+//    private Weekday session4 = new Weekday(15, 58, Calendar.FRIDAY);
+//    private Weekday session5 = new Weekday(15, 59, Calendar.FRIDAY);
 
 
     private Calendar createCalendar(int day, int hour, int minute){
@@ -53,20 +57,19 @@ public class FinalScheduler {
 
     /********** Reminder **********/
     public void createReminder(Context context) {
-        setAlarm(context, "", "Session1", 10, session1, 0, 0);
-        setAlarm(context, "", "Session2", 20, session2, 0, 0);
-        setAlarm(context, "", "Session3", 20, session3, 0, 0);
-        setAlarm(context, "", "Session4", 20, session4, 0, 0);
-        setAlarm(context, "", "Session5", 20, session5, 0, 0);
+        setAlarm(context, 10, "Session 1", session1);
+        setAlarm(context, 20, "Session 2", session2);
+        setAlarm(context, 30, "Session 3", session3);
+        setAlarm(context, 40, "Session 4", session4);
+        setAlarm(context, 50, "Session 5", session5);
     }
 
-    public void setAlarm(Context context, String course, String questionnaire, int requestCode, Weekday weekday, int hourAddition, int minuteAddition){
+    public void setAlarm(Context context, int requestCode, String session, Weekday weekday){
         Intent myIntent = new Intent(context, AlarmNotificationReceiver.class);
+        myIntent.putExtra("Session", session);
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        myIntent.putExtra("course", course);
-        myIntent.putExtra("questionnaire", questionnaire);
         PendingIntent pendingIntent1 = PendingIntent.getBroadcast(context, requestCode, myIntent, PendingIntent.FLAG_ONE_SHOT);
-        Calendar calendar1 = createCalendar(weekday.getDay2(),weekday.getHour()+hourAddition, weekday.getMinute()+minuteAddition);
+        Calendar calendar1 = createCalendar(weekday.getDay2(),weekday.getHour(), weekday.getMinute());
 
         if (calendar1.getTimeInMillis() > System.currentTimeMillis()) {
             alarmManager.set(AlarmManager.RTC_WAKEUP, calendar1.getTimeInMillis(), pendingIntent1);
