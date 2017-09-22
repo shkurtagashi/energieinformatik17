@@ -3,9 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home3"
+            android:title="Home" />
+
+        <item
             android:id="@+id/nav_program"
             android:icon="@drawable/schedule1"
-            android:title="Program" />
+            android:title="Conference Program" />
         <item
             android:id="@+id/nav_speakers"
             android:icon="@drawable/speaker2"
@@ -13,8 +18,23 @@
         <item
             android:id="@+id/nav_papers"
             android:icon="@drawable/papers3"
-            android:title="Papers" />
+            android:title="Paper Presentations" />
+
     </group>
+
+    <item android:title="Become part of the study">
+        <menu>
+            <item
+                android:id="@+id/nav_register"
+                android:icon="@drawable/account1"
+                android:title="@string/register" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/info"
+                android:title="@string/about" />
+        </menu>
+    </item>
 
 
 </menu>

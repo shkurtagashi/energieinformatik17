@@ -1,14 +1,17 @@
-package com.example.shkurtagashi.energieinformatik;
+package com.example.shkurtagashi.energieinformatik.Fragments;
+
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.provider.Settings;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,14 +21,17 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.shkurtagashi.energieinformatik.LocalDataStorage.DatabaseHelper;
+import com.example.shkurtagashi.energieinformatik.MainActivity;
+import com.example.shkurtagashi.energieinformatik.R;
 import com.example.shkurtagashi.energieinformatik.User.User;
 import com.example.shkurtagashi.energieinformatik.User.UserData;
 import com.example.shkurtagashi.energieinformatik.User.UsersContract;
 
-import java.util.ArrayList;
-
-public class RegisterActivity extends AppCompatActivity {
-    private static final String TAG = "RegisterActivity";
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class RegisterFragment extends Fragment {
+    private static final String TAG = "RegisterFragment";
 
     DatabaseHelper dbHelper;
 
@@ -50,28 +56,34 @@ public class RegisterActivity extends AppCompatActivity {
     private String android_id;
 
 
+    public RegisterFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View rootview = inflater.inflate(R.layout.fragment_register, container, false);
 
-        dbHelper = new DatabaseHelper(this);
-        android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        dbHelper = new DatabaseHelper(getContext());
+        android_id = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
-        usernameEditText = (EditText) findViewById(R.id.username_value);
-        empaticaIDEditText = (EditText) findViewById(R.id.empatica_value);
-        ageOptions = (Spinner) findViewById(R.id.age_range);
-        genderOptions = (RadioGroup) findViewById(R.id.genderRadioButtons);
-        workOptions = (Spinner) findViewById(R.id.work_title);
-        statusOptions = (Spinner) findViewById(R.id.status_choices);
+        usernameEditText = (EditText) rootview.findViewById(R.id.username_value);
+        empaticaIDEditText = (EditText) rootview.findViewById(R.id.empatica_value);
+        ageOptions = (Spinner) rootview.findViewById(R.id.age_range);
+        genderOptions = (RadioGroup) rootview.findViewById(R.id.genderRadioButtons);
+//        workOptions = (Spinner) rootview.findViewById(R.id.work_title);
+        statusOptions = (Spinner) rootview.findViewById(R.id.status_choices);
 
         setUpGenderRadioButtons();
         setUpAgeSpinner();
-        setUpWorkSpinner();
+//        setUpWorkSpinner();
         setUpStatusSpinner();
 
 
-        submitRegistrationFormButton = (Button)findViewById(R.id.submit_button);
+        submitRegistrationFormButton = (Button)rootview.findViewById(R.id.submit_button);
         submitRegistrationFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,23 +92,18 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.v("RegistrationActivity", username + empaticaID);
 
                 if(genderSelection.equals("")){
-                    Toast.makeText(getApplicationContext(), "Please select your Gender!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Please select your Gender!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 if(ageSelection.equals("")){
-                    Toast.makeText(getApplicationContext(), "Please select your Age!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Please select your Age!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-
-                if(workSelection.equals("")){
-                    Toast.makeText(getApplicationContext(), "Please select an item from Work!", Toast.LENGTH_LONG).show();
-                    return;
-                }
 
                 if(statusSelection.equals("")){
-                    Toast.makeText(getApplicationContext(), "Please select your working Status!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Please select your Status!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -106,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                 user._empaticaID = empaticaID;
                 user._age = ageSelection;
                 user._gender = genderSelection;
-                user._work = workSelection;
+//                user._work = workSelection;
                 user._status = statusSelection;
 
                 Log.v(TAG, user._username);
@@ -114,21 +121,20 @@ public class RegisterActivity extends AppCompatActivity {
 
                 dbHelper.addUser(user);
 
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegisterActivity.this);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("New User Account");
                 alertDialog.setMessage("You have successfully created account with: \n \n" + "Username: " + username + "\nEmpaticaID: " + empaticaID + "\nAge: " + ageSelection +
-                        "\nGender: " + genderSelection + "\nWork: " + workSelection +
-                        "\nStatus: " + statusSelection + "\n \n \n Do you want to proceed?");
+                        "\nGender: " + genderSelection + "\nStatus: " + statusSelection + "\n \n \n Do you want to proceed?");
 
                 alertDialog.setIcon(R.drawable.account);
 
                 alertDialog.setNegativeButton(R.string.yes,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(), "Thank you!", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent (getApplicationContext(), MainActivity.class);
+                                Toast.makeText(getContext(), "Thank you!", Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent (getContext(), MainActivity.class);
                                 startActivity(i);
-                                finish();
+                                getActivity().finish();
                             }
                         });
 
@@ -149,20 +155,20 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        cancelRegistrationFormButton = (Button)findViewById(R.id.cancel_button);
+        cancelRegistrationFormButton = (Button)rootview.findViewById(R.id.cancel_button);
         cancelRegistrationFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                getActivity().finish();
             }
         });
+
+        return rootview;
     }
 
-
-
     /*
-    *   Gender Radio Buttons
-     */
+   *   Gender Radio Buttons
+    */
     private void setUpGenderRadioButtons(){
 
         genderOptions.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
@@ -187,7 +193,7 @@ public class RegisterActivity extends AppCompatActivity {
     */
     private void setUpAgeSpinner(){
 
-        ArrayAdapter<CharSequence> ageAdapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> ageAdapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.age_range_choices, android.R.layout.simple_spinner_item);
 
         ageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -229,36 +235,36 @@ public class RegisterActivity extends AppCompatActivity {
     /*
     * Programme spinner
     */
-    private void setUpWorkSpinner(){
-        ArrayAdapter<CharSequence> workAdapter = ArrayAdapter.createFromResource(this,
-                R.array.work_title_choices, android.R.layout.simple_spinner_item);
-        workAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        workOptions.setAdapter(workAdapter);
-
-        // Set the integer programmeSelection to the constant values
-        workOptions.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selection = (String) parent.getItemAtPosition(position);
-                if (!TextUtils.isEmpty(selection)) {
-                    if(selection.equals("Select Item")) {
-                        workSelection = "";
-                    } else if (selection.equals(getString(R.string.academia))) {
-                        workSelection = UsersContract.UserEntry.ACADEMIA;
-                    } else if(selection.equals(getString(R.string.industry))){
-                        workSelection = UsersContract.UserEntry.INDUSTRY;
-                    }
-                }
-            }
-
-            // Because AdapterView is an abstract class, onNothingSelected must be defined
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                workSelection = ""; // Unknown
-            }
-        });
-
-    }
+//    private void setUpWorkSpinner(){
+//        ArrayAdapter<CharSequence> workAdapter = ArrayAdapter.createFromResource(getContext(),
+//                R.array.work_title_choices, android.R.layout.simple_spinner_item);
+//        workAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        workOptions.setAdapter(workAdapter);
+//
+//        // Set the integer programmeSelection to the constant values
+//        workOptions.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String selection = (String) parent.getItemAtPosition(position);
+//                if (!TextUtils.isEmpty(selection)) {
+//                    if(selection.equals("Select Item")) {
+//                        workSelection = "";
+//                    } else if (selection.equals(getString(R.string.academia))) {
+//                        workSelection = UsersContract.UserEntry.ACADEMIA;
+//                    } else if(selection.equals(getString(R.string.industry))){
+//                        workSelection = UsersContract.UserEntry.INDUSTRY;
+//                    }
+//                }
+//            }
+//
+//            // Because AdapterView is an abstract class, onNothingSelected must be defined
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                workSelection = ""; // Unknown
+//            }
+//        });
+//
+//    }
 
 
     /*
@@ -266,7 +272,7 @@ public class RegisterActivity extends AppCompatActivity {
     */
     private void setUpStatusSpinner(){
 
-        ArrayAdapter<CharSequence> statusAdapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> statusAdapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.status_choices, android.R.layout.simple_spinner_item);
         statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         statusOptions.setAdapter(statusAdapter);
@@ -289,6 +295,8 @@ public class RegisterActivity extends AppCompatActivity {
                         statusSelection = UsersContract.UserEntry.STATUS_PHD_STUDENT;
                     } else if(selection.equals(getString(R.string.assistant))){
                         statusSelection = UsersContract.UserEntry.STATUS_ASSISTANT;
+                    }else if(selection.equals(getString(R.string.student))){
+                        statusSelection = UsersContract.UserEntry.STUDENT;
                     }
                 }
             }
@@ -301,5 +309,6 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
+
 
 }

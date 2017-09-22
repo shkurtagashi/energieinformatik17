@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shkurtagashi.energieinformatik.LocalDataStorage.DatabaseHelper;
@@ -31,6 +33,9 @@ public class SurveyActivity extends AppCompatActivity {
     private CheckBox checkBox2;
     private CheckBox checkBox3;
     private CheckBox checkBox4;
+    private CheckBox checkBox5;
+
+    private EditText otherText;
 
     int question1Selection = 0;
     int question2Selection = 0;
@@ -41,6 +46,9 @@ public class SurveyActivity extends AppCompatActivity {
 
     String question7Answer = "";
 
+    private TextView surveyTitle;
+
+    String title;
 
     DatabaseHelper dbHelper;
 
@@ -55,6 +63,8 @@ public class SurveyActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         final int paperId = extras.getInt("paperID");
+        final String paperTitle = extras.getString("paperTitle");
+        final String paperAuthor = extras.getString("paperAuthor");
 
         currentTimestamp = Calendar.getInstance().getTime();
 
@@ -70,6 +80,14 @@ public class SurveyActivity extends AppCompatActivity {
         checkBox2 = (CheckBox) findViewById(R.id.checkbox2);
         checkBox3 = (CheckBox) findViewById(R.id.checkbox3);
         checkBox4 = (CheckBox) findViewById(R.id.checkbox4);
+        checkBox5 = (CheckBox) findViewById(R.id.checkbox5);
+
+        otherText = (EditText) findViewById(R.id.other_text);
+        surveyTitle = (TextView) findViewById(R.id.surveyTitle);
+
+        title = surveyTitle.getText() + "\n'" + paperTitle + "'\nby " + paperAuthor;
+
+        surveyTitle.setText(title);
 
         setUpQuestion1RadioButtons();
         setUpQuestion2RadioButtons();
@@ -156,7 +174,11 @@ public class SurveyActivity extends AppCompatActivity {
         }
 
         if(checkBox4.isChecked()){
-            question7Answer += SurveyContract.SurveyEntry.OTHER;
+            question7Answer += SurveyContract.SurveyEntry.CHECK_EMAIL;
+        }
+
+        if(checkBox5.isChecked()){
+            question7Answer += otherText.getText();
         }
 
     }

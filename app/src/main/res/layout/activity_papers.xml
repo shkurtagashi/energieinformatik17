@@ -53,6 +53,8 @@
         <com.roughike.swipeselector.SwipeSelector
             android:id="@+id/paper_selector1"
             android:layout_width="match_parent"
+            app:swipe_leftButtonResource="@drawable/arrowleft"
+            app:swipe_rightButtonResource="@drawable/arrowright"
             android:layout_height="150dp"
             />
 

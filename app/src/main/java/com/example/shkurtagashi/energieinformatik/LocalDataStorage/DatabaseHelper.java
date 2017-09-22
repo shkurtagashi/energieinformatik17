@@ -54,7 +54,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + UserEntry.EMPATICAID + " TEXT, "
             + UserEntry.COLUMN_GENDER + " TEXT, "
             + UserEntry.COLUMN_AGE + " TEXT, "
-            + UserEntry.COLUMN_WORK + " TEXT, "
             + UserEntry.COLUMN_STATUS + " TEXT);";
 
 
@@ -133,7 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         User user = new User();
 
         Cursor cursor = db.query(UserEntry.TABLE_NAME_USERS, new String[]{UserEntry.USERNAME, UserEntry.EMPATICAID,
-                        UserEntry.COLUMN_GENDER, UserEntry.COLUMN_AGE, UserEntry.COLUMN_WORK, UserEntry.COLUMN_STATUS},
+                        UserEntry.COLUMN_GENDER, UserEntry.COLUMN_AGE, UserEntry.COLUMN_STATUS},
                 UserEntry.USERNAME +"=?", new String[]{String.valueOf(username)}, null, null, null, null);
 
         if(cursor != null){
@@ -142,7 +141,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     cursor.getString(cursor.getColumnIndex(UserEntry.EMPATICAID)),
                     cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_GENDER)),
                     cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_AGE)),
-                    cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_WORK)),
                     cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_STATUS))
             );
             cursor.close();
@@ -171,7 +169,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(UserEntry.EMPATICAID, user.getEmpaticaID());
             values.put(UserEntry.COLUMN_GENDER, user.getGender());
             values.put(UserEntry.COLUMN_AGE, user.getAge());
-            values.put(UserEntry.COLUMN_WORK, user.getWork());
             values.put(UserEntry.COLUMN_STATUS, user.getStatus());
 
 
@@ -275,7 +272,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 userRow.setEmpaticaID(cursor.getString(cursor.getColumnIndex(UserEntry.EMPATICAID)));
                 userRow.setGender(cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_GENDER)));
                 userRow.setAge(cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_AGE)));
-                userRow.setWork(cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_WORK)));
                 userRow.setStatus(cursor.getString(cursor.getColumnIndex(UserEntry.COLUMN_STATUS)));
 
                 // Adding Eda row to list

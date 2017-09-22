@@ -41,7 +41,8 @@ public class SurveyContract {
         public static final String ASK_QUESTION = "Asked question- ";
         public static final String MAKE_PHOTO = "Took a picture- ";
         public static final String CLAP_HANDS = "Clapped hands- ";
-        public static final String OTHER = "Check you email- ";
+        public static final String CHECK_EMAIL = "Check you email- ";
+        public static final String OTHER = "Other ";
 
 
 

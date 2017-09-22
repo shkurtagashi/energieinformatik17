@@ -25,7 +25,7 @@ public final class UsersContract {
         public final static String EMPATICAID = "empatica_id";
         public final static String COLUMN_GENDER = "gender";
         public final static String COLUMN_AGE = "age";
-        public final static String COLUMN_WORK = "work";
+//        public final static String COLUMN_WORK = "work";
         public final static String COLUMN_STATUS = "status";
 
 
@@ -49,16 +49,18 @@ public final class UsersContract {
         public static final String INDUSTRY = "Industry";
 
         public static final String STATUS_FULL_PROFESSOR = "Professor";
-        public static final String RESEARCHER = "Researcher";
         public static final String STATUS_POST_DOC = "Post-doc";
         public static final String STATUS_PHD_STUDENT = "Ph.D. Student";
+        public static final String RESEARCHER = "Researcher";
         public static final String STATUS_ASSISTANT = "Assistant";
+        public static final String STUDENT = "Student";
+
 
         public static final String OTHER = "Other";
 
 
         public static String[] getColumns(){
-            String[] columns = {_ID, ANDROID_ID, USERNAME, EMPATICAID, COLUMN_GENDER, COLUMN_AGE, COLUMN_WORK, COLUMN_STATUS};
+            String[] columns = {_ID, ANDROID_ID, USERNAME, EMPATICAID, COLUMN_GENDER, COLUMN_AGE, COLUMN_STATUS};
 
             return columns;
         }

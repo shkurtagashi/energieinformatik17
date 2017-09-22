@@ -4,7 +4,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="about">About</string>
+    <string name="about">About Study</string>
+    <string name="register">Register</string>
+
+
 
     <string name="program_label"> Work *</string>
     <string name="faculty_label"> Faculty</string>
@@ -14,6 +17,7 @@
     <string name="gender_label"> Gender *</string>
     <string name="username_label">Username</string>
     <string name="empatica_label">Empatica ID</string>
+    <string name="education_label">Education Level *</string>
     <string name="presenterQuestion">Are you presenting in the conference?</string>
 
 
@@ -31,6 +35,7 @@
     <string name="phd_student">Ph.D. Student</string>
     <string name="assistant">Assistant</string>
     <string name="researcher">Researcher</string>
+    <string name="student">Student</string>
     <string name="other">Other</string>
 
     <string name="male">M</string>
@@ -68,7 +73,6 @@
     <string name="submitRating">Submit Rating</string>
 
 
-
     <string-array name="age_range_choices">
         <item>@string/selectItem</item>
         <item>@string/range20to30</item>
@@ -95,9 +99,11 @@
         <item>@string/selectItem</item>
         <item>@string/professor</item>
         <item>@string/post_doc</item>
+        <item>@string/researcher</item>
         <item>@string/phd_student</item>
         <item>@string/assistant</item>
-        <item>@string/researcher</item>
+        <item>@string/student</item>
+
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

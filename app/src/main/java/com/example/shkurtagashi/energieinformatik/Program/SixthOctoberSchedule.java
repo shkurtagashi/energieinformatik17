@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.shkurtagashi.energieinformatik.Speakers.SpeakersActivity;
+import com.example.shkurtagashi.energieinformatik.Speakers.SpeakersFragment;
 import com.example.shkurtagashi.energieinformatik.Papers.PapersActivity;
 import com.example.shkurtagashi.energieinformatik.R;
-import com.example.shkurtagashi.energieinformatik.Speakers.SpeakersActivity;
 
 /**
  * A simple {@link Fragment} subclass.

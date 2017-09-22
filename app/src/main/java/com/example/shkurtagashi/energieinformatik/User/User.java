@@ -11,28 +11,25 @@ public class User {
     public String _empaticaID;
     public String _gender;
     public String _age;
-    public String _work;
     public String _status;
 
     public User(){}
 
-    public User(String android_id, String username, String empaticaID, String gender, String age, String status, String work){
+    public User(String android_id, String username, String empaticaID, String gender, String age, String status){
         setAndroidId(android_id);
         setUsername(username);
         setEmpaticaID(empaticaID);
         setGender(gender);
         setAge(age);
         setStatus(status);
-        setWork(work);
     }
 
-    public User(String username, String empaticaID, String gender, String age, String status, String work){
+    public User(String username, String empaticaID, String gender, String age, String status){
         setUsername(username);
         setEmpaticaID(empaticaID);
         setGender(gender);
         setAge(age);
         setStatus(status);
-        setWork(work);
     }
 
 
@@ -85,11 +82,5 @@ public class User {
         return this._empaticaID;
     }
 
-    public void setWork(String work) {
-        this._work = work;
-    }
 
-    public String getWork(){
-        return this._work;
-    }
 }
