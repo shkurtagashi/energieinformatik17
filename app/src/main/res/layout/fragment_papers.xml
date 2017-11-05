@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        tools:context="com.example.shkurtagashi.energieinformatik.Papers.PapersFragment" >
+        tools:context="com.usi.shkurtagashi.energieinformatik.Papers.PapersFragment" >
 
         <TextView
             android:id="@+id/paperSessionsTitle"
@@ -54,18 +54,25 @@
                 android:id="@+id/paper_selector1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                app:swipe_leftButtonResource="@drawable/arrowleft"
-                app:swipe_rightButtonResource="@drawable/arrowright"
                 />
 
-            <TextView
-                android:id="@+id/ratePaperPlease"
+            <CheckBox
+                android:id="@+id/presence1"
                 android:layout_below="@+id/paper_selector1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_centerHorizontal="true"
-                android:text="Could you please rate this presentation?"/>
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease"
+                android:layout_below="@id/presence1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
 
             <RatingBar
                 android:id="@+id/star_rating1"
@@ -127,9 +134,18 @@
                 android:layout_height="150dp"
                 />
 
+            <CheckBox
+                android:id="@+id/presence2"
+                android:layout_below="@+id/paper_selector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
             <TextView
                 android:id="@+id/ratePaperPlease2"
-                android:layout_below="@+id/paper_selector2"
+                android:layout_below="@+id/presence2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -194,9 +210,18 @@
                 android:layout_height="150dp"
                 />
 
+            <CheckBox
+                android:id="@+id/presence3"
+                android:layout_below="@+id/paper_selector3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
             <TextView
                 android:id="@+id/ratePaperPlease3"
-                android:layout_below="@+id/paper_selector3"
+                android:layout_below="@+id/presence3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -262,9 +287,18 @@
                 android:layout_height="150dp"
                 />
 
+            <CheckBox
+                android:id="@+id/presence4"
+                android:layout_below="@+id/paper_selector4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
             <TextView
                 android:id="@+id/ratePaperPlease4"
-                android:layout_below="@+id/paper_selector4"
+                android:layout_below="@+id/presence4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -330,9 +364,18 @@
                 android:layout_height="150dp"
                 />
 
+            <CheckBox
+                android:id="@+id/presence5"
+                android:layout_below="@+id/paper_selector5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
             <TextView
                 android:id="@+id/ratePaperPlease5"
-                android:layout_below="@+id/paper_selector5"
+                android:layout_below="@+id/presence5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

@@ -6,369 +6,409 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
-    tools:context="com.example.shkurtagashi.energieinformatik.Papers.PapersActivity" >
-
-    <TextView
-        android:id="@+id/paperSessionsTitle"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="24dp"
-        android:text="Paper Sessions"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/expandableButton1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/paperSessionsTitle"
-        android:background="?attr/colorButtonNormal"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:onClick="expandableButton1"
-        android:paddingRight="10dp"
-        android:text="Session 1"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary" />
-
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/expandableButton1"
-        android:background="@color/primary_material_light"
-        android:padding="16dp"
-        app:ael_duration="400"
-        app:ael_expanded="false"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-
-        <com.roughike.swipeselector.SwipeSelector
-            android:id="@+id/paper_selector1"
-            android:layout_width="match_parent"
-            app:swipe_leftButtonResource="@drawable/arrowleft"
-            app:swipe_rightButtonResource="@drawable/arrowright"
-            android:layout_height="150dp"
-            />
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        tools:context="com.usi.shkurtagashi.energieinformatik.Papers.PapersFragment" >
 
         <TextView
-            android:id="@+id/ratePaperPlease"
-            android:layout_below="@+id/paper_selector1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="Could you please rate this presentation?"/>
-
-        <RatingBar
-            android:id="@+id/star_rating1"
-            android:layout_below="@id/ratePaperPlease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            style="@style/starRatingBar"
-            android:numStars="5"
-            android:rating="0.0"
-            android:stepSize="1"/>
-
-        <LinearLayout
+            android:id="@+id/paperSessionsTitle"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/star_rating1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="Paper Sessions"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/rateButton1"
-                android:layout_gravity="center"
+        <Button
+            android:id="@+id/expandableButton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paperSessionsTitle"
+            android:background="?attr/colorButtonNormal"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton1"
+            android:paddingRight="10dp"
+            android:text="Session 1"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton1"
+            android:background="@color/primary_material_light"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <com.roughike.swipeselector.SwipeSelector
+                android:id="@+id/paper_selector1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                />
+
+            <CheckBox
+                android:id="@+id/presence1"
+                android:layout_below="@+id/paper_selector1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit Rating"/>
-
-        </LinearLayout>
-
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-    <Button
-        android:id="@+id/expandableButton2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/expandableLayout1"
-        android:background="?attr/colorButtonNormal"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:onClick="expandableButton2"
-        android:paddingRight="10dp"
-        android:text="Session 2"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary" />
-
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/expandableButton2"
-        android:background="@color/primary_material_light"
-        android:padding="16dp"
-        app:ael_duration="400"
-        app:ael_expanded="false"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-
-        <com.roughike.swipeselector.SwipeSelector
-            android:id="@+id/paper_selector2"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            />
-
-        <TextView
-            android:id="@+id/ratePaperPlease2"
-            android:layout_below="@+id/paper_selector2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="@string/ratePresentation"/>
-
-        <RatingBar
-            android:id="@+id/star_rating2"
-            android:layout_below="@id/ratePaperPlease2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            style="@style/starRatingBar"
-            android:numStars="5"
-            android:rating="0.0"
-            android:stepSize="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/star_rating2"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/rateButton2"
                 android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease"
+                android:layout_below="@id/presence1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submitRating"/>
-
-        </LinearLayout>
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-    <Button
-        android:id="@+id/expandableButton3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/expandableLayout2"
-        android:background="?attr/colorButtonNormal"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:onClick="expandableButton3"
-        android:paddingRight="10dp"
-        android:text="Session 3"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary" />
-
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/expandableButton3"
-        android:background="@color/primary_material_light"
-        android:padding="16dp"
-        app:ael_duration="400"
-        app:ael_expanded="false"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-
-        <com.roughike.swipeselector.SwipeSelector
-            android:id="@+id/paper_selector3"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            />
-
-        <TextView
-            android:id="@+id/ratePaperPlease3"
-            android:layout_below="@+id/paper_selector3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="@string/ratePresentation"/>
-
-        <RatingBar
-            android:id="@+id/star_rating3"
-            android:layout_below="@id/ratePaperPlease3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            style="@style/starRatingBar"
-            android:numStars="5"
-            android:rating="0.0"
-            android:stepSize="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/star_rating3"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/rateButton3"
                 android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
+
+            <RatingBar
+                android:id="@+id/star_rating1"
+                android:layout_below="@id/ratePaperPlease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submitRating"/>
+                android:layout_centerHorizontal="true"
+                style="@style/starRatingBar"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1"/>
 
-        </LinearLayout>
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/star_rating1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/rateButton1"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Rating"/>
+
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
-    <Button
-        android:id="@+id/expandableButton4"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/expandableLayout3"
-        android:background="?attr/colorButtonNormal"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:onClick="expandableButton4"
-        android:paddingRight="10dp"
-        android:text="Session 4"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary" />
-
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/expandableButton4"
-        android:background="@color/primary_material_light"
-        android:padding="16dp"
-        app:ael_duration="400"
-        app:ael_expanded="false"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-
-        <com.roughike.swipeselector.SwipeSelector
-            android:id="@+id/paper_selector4"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            />
-
-        <TextView
-            android:id="@+id/ratePaperPlease4"
-            android:layout_below="@+id/paper_selector4"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/expandableButton2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="@string/ratePresentation"/>
+            android:layout_below="@+id/expandableLayout11"
+            android:background="?attr/colorButtonNormal"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton2"
+            android:paddingRight="10dp"
+            android:text="Session 2"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorPrimary" />
 
-        <RatingBar
-            android:id="@+id/star_rating4"
-            android:layout_below="@id/ratePaperPlease4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            style="@style/starRatingBar"
-            android:numStars="5"
-            android:rating="0.0"
-            android:stepSize="1"/>
-
-        <LinearLayout
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout21"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/star_rating4"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton2"
+            android:background="@color/primary_material_light"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
 
-            <Button
-                android:id="@+id/rateButton4"
-                android:layout_gravity="center"
+            <com.roughike.swipeselector.SwipeSelector
+                android:id="@+id/paper_selector2"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                />
+
+            <CheckBox
+                android:id="@+id/presence2"
+                android:layout_below="@+id/paper_selector2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submitRating"/>
-
-        </LinearLayout>
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-
-    <Button
-        android:id="@+id/expandableButton5"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/expandableLayout4"
-        android:background="?attr/colorButtonNormal"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:onClick="expandableButton5"
-        android:paddingRight="10dp"
-        android:text="Session 5"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary" />
-
-    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-        android:id="@+id/expandableLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/expandableButton5"
-        android:background="@color/primary_material_light"
-        android:padding="16dp"
-        app:ael_duration="400"
-        app:ael_expanded="false"
-        app:ael_interpolator="accelerate"
-        app:ael_orientation="vertical">
-
-        <com.roughike.swipeselector.SwipeSelector
-            android:id="@+id/paper_selector5"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            />
-
-        <TextView
-            android:id="@+id/ratePaperPlease5"
-            android:layout_below="@+id/paper_selector5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:text="@string/ratePresentation"/>
-
-        <RatingBar
-            android:id="@+id/star_rating5"
-            android:layout_below="@id/ratePaperPlease5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            style="@style/starRatingBar"
-            android:numStars="5"
-            android:rating="0.0"
-            android:stepSize="1"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/star_rating5"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/rateButton5"
                 android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease2"
+                android:layout_below="@+id/presence2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submitRating"/>
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
 
-        </LinearLayout>
+            <RatingBar
+                android:id="@+id/star_rating2"
+                android:layout_below="@id/ratePaperPlease2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/starRatingBar"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1"/>
 
-    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/star_rating2"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/rateButton2"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submitRating"/>
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <Button
+            android:id="@+id/expandableButton3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableLayout21"
+            android:background="?attr/colorButtonNormal"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton3"
+            android:paddingRight="10dp"
+            android:text="Session 3"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout31"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton3"
+            android:background="@color/primary_material_light"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <com.roughike.swipeselector.SwipeSelector
+                android:id="@+id/paper_selector3"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                />
+
+            <CheckBox
+                android:id="@+id/presence3"
+                android:layout_below="@+id/paper_selector3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease3"
+                android:layout_below="@+id/presence3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
+
+            <RatingBar
+                android:id="@+id/star_rating3"
+                android:layout_below="@id/ratePaperPlease3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/starRatingBar"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/star_rating3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/rateButton3"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submitRating"/>
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
+        <Button
+            android:id="@+id/expandableButton4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableLayout31"
+            android:background="?attr/colorButtonNormal"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton4"
+            android:paddingRight="10dp"
+            android:text="Session 4"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorPrimary" />
 
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout41"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton4"
+            android:background="@color/primary_material_light"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <com.roughike.swipeselector.SwipeSelector
+                android:id="@+id/paper_selector4"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                />
+
+            <CheckBox
+                android:id="@+id/presence4"
+                android:layout_below="@+id/paper_selector4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease4"
+                android:layout_below="@+id/presence4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
+
+            <RatingBar
+                android:id="@+id/star_rating4"
+                android:layout_below="@id/ratePaperPlease4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/starRatingBar"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/star_rating4"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/rateButton4"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submitRating"/>
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+        <Button
+            android:id="@+id/expandableButton5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableLayout41"
+            android:background="?attr/colorButtonNormal"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton5"
+            android:paddingRight="10dp"
+            android:text="Session 5"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout51"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton5"
+            android:background="@color/primary_material_light"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <com.roughike.swipeselector.SwipeSelector
+                android:id="@+id/paper_selector5"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                />
+
+            <CheckBox
+                android:id="@+id/presence5"
+                android:layout_below="@+id/paper_selector5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/didnotAttend"/>
+
+            <TextView
+                android:id="@+id/ratePaperPlease5"
+                android:layout_below="@+id/presence5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ratePresentation"/>
+
+            <RatingBar
+                android:id="@+id/star_rating5"
+                android:layout_below="@id/ratePaperPlease5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                style="@style/starRatingBar"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/star_rating5"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/rateButton5"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submitRating"/>
+
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+    </RelativeLayout>
 </ScrollView>
 

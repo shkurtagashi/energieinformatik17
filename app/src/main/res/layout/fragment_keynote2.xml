@@ -1,82 +1,82 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/keynoteSpeaker2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.shkurtagashi.energieinformatik.Speakers.Keynote2Fragment">
-
-    <LinearLayout
+ <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="48dp"
-        android:padding="24dp">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/keynoteSpeaker2"
+        tools:context="com.usi.shkurtagashi.energieinformatik.Speakers.Keynote2Fragment">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp"
+            android:padding="24dp">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:id="@+id/paperTitle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="District Heating, University Collaboration and Black Swans"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:text="Wolfgang Korosec"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
                     android:layout_weight="2"
-                    android:text="District Heating, University Collaboration and Black Swans"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:paddingTop="10dp"
-                    android:text="Wolfgang Korosec"
-                    android:textStyle="bold" />
-
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/keynote2"/>
             </LinearLayout>
 
-            <ImageView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/keynote2"/>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:paddingTop="40dp"
-            android:layout_weight="4"
-            android:text="ABSTRACT: From a business perspective research outcome is important, but what matters is impact – how new methods, insights, knowledge derived from a collaboration with a university can contribute to a company’s success and performance. Using an ongoing district heating project as an example, we will take a look at the success factors and obstacles in the collaboration between universities and smaller companies in the energy sector."
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
             <TextView
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:layout_height="match_parent"
-                android:text="Friday, October 6"/>
+                android:id="@+id/abstract1"
+                android:layout_below="@id/paperTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="ABSTRACT: From a business perspective research outcome is important, but what matters is impact – how new methods, insights, knowledge derived from a collaboration with a university can contribute to a company’s success and performance. Using an ongoing district heating project as an example, we will take a look at the success factors and obstacles in the collaboration between universities and smaller companies in the energy sector."
+                />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="9:00 - 10:00"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/abstract1"
+                android:paddingTop="20dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent"
+                    android:text="Friday, October 6"/>
 
-        </LinearLayout>
-
-    </LinearLayout>
-
-</FrameLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_height="match_parent"
+                    android:text="9:00 - 10:00"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>

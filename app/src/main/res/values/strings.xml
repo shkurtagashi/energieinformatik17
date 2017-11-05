@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Energieinformatik17</string>
+    <string name="app_name">Energieinformatik2017</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,13 +8,12 @@
     <string name="register">Register</string>
 
 
-
-    <string name="program_label"> Work *</string>
+    <string name="program_label"> Work **</string>
     <string name="faculty_label"> Faculty</string>
-    <string name="age_label"> Age *</string>
-    <string name="status_label"> Status *</string>
+    <string name="age_label"> Age **</string>
+    <string name="status_label"> Status **</string>
     <string name="course_label"> Course</string>
-    <string name="gender_label"> Gender *</string>
+    <string name="gender_label"> Gender **</string>
     <string name="username_label">Username</string>
     <string name="empatica_label">Empatica ID</string>
     <string name="education_label">Education Level *</string>
@@ -69,8 +68,105 @@
     <string name="six">6</string>
     <string name="seven">7</string>
 
-    <string name="ratePresentation">Could you please rate this presentation?</string>
+    <string name="ratePresentation">How do you rate this presentation?</string>
+    <string name="didnotAttend">I did not attend this presentation.</string>
+
     <string name="submitRating">Submit Rating</string>
+
+    <string name="session1">Session 1: Smart Grid Simulation</string>
+    <string name="session11">Session Chair: Hermann de Meer (University of Passau, DE)</string>
+
+
+    <string name="paper11">Using Locally Produced Photovoltaic Energy to Charge Electric Vehicles </string>
+    <string name="paper111">René Buffat (ETH Zurich, CH) \nDominik Bucher (ETH Zurich, CH) \nMartin Raubal (ETH Zürich, CH)</string>
+    <string name="paper1111">***Best Paper Award nominee***</string>
+
+    <string name="paper12">Modeling and Simulation of Local Flexibilities and their Effect to the Entire Power System</string>
+    <string name="paper122">Lukas Exel (Saarland University, DE) \nGeorg Frey (Saarland University, DE)</string>
+
+
+    <string name="paper13">Including a Virtual Battery Storage into Thermal Unit Commitment</string>
+    <string name="paper133">David Steber (FAU Erlangen-Nürnberg, DE) \nMarco Pruckner (FAU Erlangen-Nürnberg, DE) \nJonas Schlund (FAU Erlangen-Nürnberg, DE) \nPeter Bazan (FAU Erlangen-Nürnberg, DE) \nReinhard German (FAU Erlangen-Nürnberg, DE)</string>
+
+    <string name="paper14">Smart Grid Co-Simulation with MOSAIK and HLA: A Comparison Study </string>
+    <string name="paper144">Cornelius Steinbrink (OFFIS – Oldenburg Institute for Information Technology, DE) \nA. A. van der Meer (Delft University of Technology, NL) \nMilos Cvetkovic (Delft University of Technology, NL) \nDavood Babazadeh (OFFIS – Oldenburg Institute for Information Technology, DE) \nSebastian Rohjans (Hamburg University of Applied Sciences, DE) \nPeter Palensky (Delft University of Technology, NL) \nSebastian Lehnhoff (OFFIS – Oldenburg Institute for Information Technology, DE)</string>
+
+    <string name="paper15">Result processing approaches for large smart grid co-simulations</string>
+    <string name="paper155">Frank Marten (Fraunhofer IWES, DE) \nAnna-Lena Mand (Fraunhofer IWES, DE) \nAndreas Bernard (Fraunhofer IWES, DE) \nBjörn Kolja Mielsch (Fraunhofer IWES, DE) \nMike Vogt (Fraunhofer IWES, DE)</string>
+
+    <string name="session2">Session 2: Classification and Clustering</string>
+    <string name="session22">Session Chair: Andrea Rizzoli (University of Applied Sciences of Southern Switzerland, CH)</string>
+
+    <string name="paper21">NIWM: Non-intrusive water monitoring to uncover heat energy use in households</string>
+    <string name="paper211">Samuel Schöb (University of Bamberg, DE) \nSebastian A. Günther (University of Bamberg, DE) \nKarl Regensburger (LAGRAR, AT) \nThorsten Staake (University of Bamberg, DE)</string>
+    <string name="paper2111">***Best Paper Award nominee***</string>
+
+    <string name="paper22">PROMT: Predicting Occupancy Presence in Multiple Resolution with Time Shift Agnostic Classification</string>
+    <string name="paper222">Fisayo Caleb Sangogboye (University of Southern Denmark, DK) \nMikkel Baun Kjærgaard (University of Southern Denmark, DK)</string>
+
+
+    <string name="paper23">Exploring Zero-Training Algorithms for Occupancy Detection based on Smart Meter Measurements</string>
+    <string name="paper233">Vincent Becker (ETH Zürich, CH) \nWilhelm Kleiminger (ETH Zürich, CH)</string>
+
+
+    <string name="paper24">Phase preserving Profile Generation from Measurement Data by Clustering and Performance Analysis </string>
+    <string name="paper244">Paul Zehetbauer (AIT – Austrian Institute of Technology, AT) \nMatthias Stifter (AIT – Austrian Institute of Technology, AT) \nBharath Varsh Rao (AIT – Austrian Institute of Technology, AT)</string>
+
+
+    <string name="session3">Session 3: Standardization and Model Optimization</string>
+    <string name="session33">Session Chair: Dominik Engel (Salzburg University of Applied Sciences, AT)</string>
+
+    <string name="paper31">Automated Deserializer Generation from CIM Ontologies</string>
+    <string name="paper311">Lukas Razik (RWTH Aachen, DE) \nMarkus Mirz (RWTH Aachen, DE) \nDaniel Knibbe (RWTH Aachen, DE) \nStefan Lankes (RWTH Aachen, DE) \nAntonello Monti (RWTH Aachen, DE)</string>
+
+    <string name="paper32">Integrating distribution system operator system landscapes</string>
+    <string name="paper322">Dominik Ascher (TU Munich, DE) \nDenis Bytschkow (fortiss GmbH, DE)</string>
+
+    <string name="paper33">A Comprehensive Modelling Framework for Demand Side Flexibility in Smart Grids</string>
+    <string name="paper333">Nicole Ludwig (KIT, DE) \nEsther Mengelkamp (KIT, DE) \nPhilipp Staudt (KIT, DE)</string>
+    <string name="paper3333">***Best Paper Award nominee***</string>
+
+
+    <string name="paper34">Efficiently Solving DSM Problems – Are We There Yet?</string>
+    <string name="paper344">Marc Schmidt (KIT, DE) \nFlorian Salah (KIT, DE) \nChristof Weinhardt (KIT, DE)</string>
+
+    <string name="paper35">A Threat Analysis of the Vehicle-to-Grid Charging Protocol ISO 15118 </string>
+    <string name="paper355">Kaibin Bao (KIT, DE)  \nHristo Valev (KIT, DE) \nManuela Wagner(KIT, DE) \nHartmut Schmeck (KIT, DE)</string>
+
+
+    <string name="session4">Session 4: Market-Based Load Management: Blockchain, Peak-Shaving and Scenario-Based Optimization</string>
+    <string name="session44">Session Chair: Kai Hufendiek (University of Stuttgart, DE)</string>
+
+    <string name="paper41">Privacy-preserving Blockchain-based Electric Vehicle Charging with Dynamic Tariff Decisions</string>
+    <string name="paper411">Fabian Knirsch (Salzburg University of Applied Sciences, AT) \nAndreas Unterweger (Salzburg University of Applied Sciences, AT) \nDominik Engel (Salzburg University of Applied Sciences, AT)</string>
+
+    <string name="paper42">A Blockchain-Based Smart Grid: Towards Sustainable Local Energy Markets </string>
+    <string name="paper422">Esther Mengelkamp (KIT, DE) \nBenedikt Notheisen (KIT, DE) \nCarolin Beer (KIT, DE) \nDavid Dauer (FZI Forschungszentrum Informatik Karlsruhe, DE) \nChristof Weinhardt (KIT, DE)</string>
+
+    <string name="paper43">Exploiting Flexibility in Smart Grids at Scale</string>
+    <string name="paper433">Lukas Barth (KIT, DE) \nDorothea Wagner (KIT, DE)</string>
+
+    <string name="paper44">Using Demand Side Management and CHP in renewable dominated decentral energy systems</string>
+    <string name="paper444">Niklas Hartmann (Fraunhofer Institute for Solar Energy Systems ISE, DE) \nJessica Thomsen (Fraunhofer Institute for Solar Energy Systems ISE, DE) \nNatapon Wanapinit (Fraunhofer Institute for Solar Energy Systems ISE, DE)</string>
+
+
+    <string name="session5">Session 5: Market-Based Load Management: Thermal/Distributed Loads</string>
+    <string name="session55">Session Chair: Vlad Coroama (ETH Zurich) </string>
+
+    <string name="paper51">Economic nonlinear MPC for a population of thermostatically controlled loads </string>
+    <string name="paper511">Nikita Zemtsov (Technical University of Liberec, CZ) \nJaroslav Hlava (Technical University of Liberec, CZ) \nGalina Frantsuzova (Novosibirsk State Technical University, RU) \nHenrik Madsen (Technical University of Denmark, DK) \nJohn Bagterp Jørgensen (Technical University of Denmark, DK) </string>
+
+    <string name="paper52">Understanding Price Functions to Control Domestic Electric Water Heaters for Demand Response</string>
+    <string name="paper522">Tobias Lübkert (Hamburg University of Technology, DE) \nMarcus Venzke (Hamburg University of Technology, DE) \nNhat-Vinh Vo (Open University Ho Chi Minh City, VN) \nVolker Turau (Hamburg University of Technology, DE)</string>
+
+    <string name="paper53">Provision of Frequency Containment Reserve with an Aggregate of Air Handling Units </string>
+    <string name="paper533">Julian Rominger (FZI Research Center for Information Technology Karlsruhe, DE) \nFabian Kern (FZI Research Center for Information Technology Karlsruhe, DE) \nHartmut Schmeck (KIT, DE)</string>
+
+    <string name="paper54">A Market-Based Smart Grid Approach to Doubling the Power Grid Capacity Without Physical Grid Expansion</string>
+    <string name="paper544">Joachim Bagemihl (Alpiq AG, CH) \nFrank Boesner (Alpiq AG, CH) \nJens Riesinger (Alpiq AG, CH) \nMichael Künzli (University of Applied Sciences and Arts Northwestern Switzerland, CH) \nGwendolin Wilke (Lucerne University of Applied Sciences and Arts, CH) \nGabriela Binder (Lucerne University of Applied Sciences and Arts, CH) \nHolger Wache (University of Applied Sciences and Arts Northwestern Switzerland, CH) \nDaniel Laager (EBM – Genossenschaft Elektra Birseck, CH) \nJürgen Breit (Stadtwerke Crailsheim, DE) \nMichael Wurzinger (ZHAW Zurich University of Applied Sciences, CH) \nJuliana Zapata (ZHAW Zurich University of Applied Sciences, CH) \nSilvia Ulli-Beer (ZHAW Zurich University of Applied Sciences, CH) \nVincent Layec (University of Applied Sciences and Arts Northwestern Switzerland, CH) \nThomas Stadler (Xamax AG, CH) \nFranz Stabauer (ASKI Industrie-Elektronik GmbH, AT)</string>
+
+    <string name="paper55">Shaping aggregated load profiles based on optimized local scheduling of home appliances </string>
+    <string name="paper555">Christoph Hunziker (University of Applied Sciences Northwestern Switzerland, CH) \nNicola Schulz (University of Applied Sciences Northwestern Switzerland, CH) \nHolger Wache (University of Applied Sciences Northwestern Switzerland, CH)</string>
 
 
     <string-array name="age_range_choices">
@@ -103,7 +199,7 @@
         <item>@string/phd_student</item>
         <item>@string/assistant</item>
         <item>@string/student</item>
-
+        <item>@string/other</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

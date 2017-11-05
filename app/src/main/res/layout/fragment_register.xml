@@ -1,8 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shkurtagashi.energieinformatik.Fragments.RegisterFragment">
+    tools:context="com.usi.shkurtagashi.energieinformatik.Fragments.RegisterFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,6 +53,21 @@
                     android:inputType="textPersonName" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email*"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
 
 
         <LinearLayout
@@ -195,11 +210,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="*These fields are mandatory." />
+            android:text="*This field is necessary only if you want to participate in the study and be considered for the raffle of 3 Amazon vouchers of 50 EUR each.
+            \n **These fields are mandatory." />
         <!-- Submit Button -->
 
 
     </LinearLayout>
 
-</FrameLayout>
+</ScrollView>

@@ -1,9 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fifthOctober"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shkurtagashi.energieinformatik.Program.SixthOctoberSchedule">
+    tools:context="com.usi.shkurtagashi.energieinformatik.Program.SixthOctoberSchedule">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:textColor="@color/accent_material_light"
-                    android:text="Keynote by Prof. Kamin Whitehouse" />
+                    android:text="Keynote\n\nBig Data Analytics for a Diversity of Buildings \nProf. Kamin Whithehouse (University of Virginia, USA)" />
             </TableRow>
         </com.balysv.materialripple.MaterialRippleLayout>
 
@@ -93,10 +93,10 @@
                 android:text="Coffee break" />
         </TableRow>
 
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/ripple2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/ripple2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
         <TableRow
             android:id="@+id/tableRow5"
@@ -110,14 +110,176 @@
                 android:layout_weight="1"
                 android:text="10:30 – 12:00"
                 />
-            <TextView
-                android:layout_width="0dp"
+
+            <TableLayout
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:textColor="@color/accent_material_light"
-                android:text="Paper Session 1" />
+                android:layout_width="0dp"
+                android:layout_weight="3">
+                <TableRow
+                    android:id="@+id/session1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/session1" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/session11"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/session11" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/paper11"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper11" />
+                    <ImageButton
+                        android:id="@+id/paper11pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper111"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper111" />
+                </TableRow>
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textStyle="bold"
+                        android:text="@string/paper1111" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper12"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper12" />
+                    <ImageButton
+                        android:id="@+id/paper12pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper122"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper122" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper13"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper13" />
+                    <ImageButton
+                        android:id="@+id/paper13pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper133"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper133" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper14"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper14" />
+                    <ImageButton
+                        android:id="@+id/paper14pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper144"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper144" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/paper15"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper15" />
+                    <ImageButton
+                        android:id="@+id/paper15pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper155"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper155" />
+                </TableRow>
+            </TableLayout>
         </TableRow>
-        </com.balysv.materialripple.MaterialRippleLayout>
+        <!--</com.balysv.materialripple.MaterialRippleLayout>-->
 
         <TableRow
             android:id="@+id/tableRow6"
@@ -158,10 +320,10 @@
         </TableRow>
 
 
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/ripple3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/ripple3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
         <TableRow
             android:id="@+id/tableRow8"
             android:layout_height="wrap_content"
@@ -174,14 +336,148 @@
                 android:layout_weight="1"
                 android:text="14:30 – 16:00"
                 />
-            <TextView
-                android:layout_width="0dp"
+            <TableLayout
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:textColor="@color/accent_material_light"
-                android:text="Paper Session 2" />
+                android:layout_width="0dp"
+                android:layout_weight="3">
+                <TableRow
+                    android:id="@+id/session2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/session2" />
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/session22"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/session22" />
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper21"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper21" />
+                    <ImageButton
+                        android:id="@+id/paper21pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper211"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper211" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper2111"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textStyle="bold"
+                        android:text="@string/paper2111" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper22"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper22" />
+                    <ImageButton
+                        android:id="@+id/paper22pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper222"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper222" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper23"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper23" />
+                    <ImageButton
+                        android:id="@+id/paper23pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper233"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper233" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper24"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper24" />
+                    <ImageButton
+                        android:id="@+id/paper24pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper244"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper244" />
+                </TableRow>
+            </TableLayout>
         </TableRow>
-        </com.balysv.materialripple.MaterialRippleLayout>
+        <!--</com.balysv.materialripple.MaterialRippleLayout>-->
 
         <TableRow
             android:id="@+id/tableRow9"
@@ -199,7 +495,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Tools and Methods Workshop*" />
+                android:text="Tools and Methods Workshop\nRoom 351 in the main building." />
         </TableRow>
 
 
@@ -222,10 +518,10 @@
                 android:text="Coffee break" />
         </TableRow>
 
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/ripple4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/ripple4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
         <TableRow
             android:id="@+id/tableRow11"
@@ -239,14 +535,171 @@
                 android:layout_weight="1"
                 android:text="16:30 – 18:00"
                 />
-            <TextView
-                android:layout_width="0dp"
+            <TableLayout
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:textColor="@color/accent_material_light"
-                android:text="Paper Session 3" />
+                android:layout_width="0dp"
+                android:layout_weight="3">
+                <TableRow
+                    android:id="@+id/session3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/session3" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/session33"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/session33"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper31"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper31" />
+                    <ImageButton
+                        android:id="@+id/paper31pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper311"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper311" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper32"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper32" />
+                    <ImageButton
+                        android:id="@+id/paper32pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper322"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper322" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper33"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper33" />
+                    <ImageButton
+                        android:id="@+id/paper33pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper333"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper333" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper3333"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textStyle="bold"
+                        android:text="@string/paper3333" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper34"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper34" />
+                    <ImageButton
+                        android:id="@+id/paper34pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper344"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper344" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper35"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/accent_material_light"
+                        android:text="@string/paper35" />
+                    <ImageButton
+                        android:id="@+id/paper35pdf"
+                        android:background="@drawable/pdf4"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/paper355"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/paper355" />
+                </TableRow>
+            </TableLayout>
         </TableRow>
-        </com.balysv.materialripple.MaterialRippleLayout>
+        <!--</com.balysv.materialripple.MaterialRippleLayout>-->
 
         <TableRow
             android:id="@+id/tableRow12"
@@ -264,21 +717,21 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Social dinner" />
+                android:text="Social dinner and announcement of the winner of the Best Paper Award. \n \nRestaurant La Lanchetta Lounge Bar and Pinsa." />
         </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow13"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:gravity="center_horizontal"
-            android:padding="10dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="*This workshop takes place in room 351 in the main building." />
-        </TableRow>
+        <!--<TableRow-->
+            <!--android:id="@+id/tableRow13"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:padding="10dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="3"-->
+                <!--android:text="*This workshop takes place in " />-->
+        <!--</TableRow>-->
 
     </TableLayout>
-</FrameLayout>
+</ScrollView>

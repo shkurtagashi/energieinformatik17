@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.shkurtagashi.energieinformatik.Speakers.SpeakersFragment">
+    tools:context="com.usi.shkurtagashi.energieinformatik.Speakers.SpeakersFragment">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/speakers_data_tab_layout"

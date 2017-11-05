@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shkurtagashi.energieinformatik.Papers.SixthOctoberFragment">
+    tools:context="com.usi.shkurtagashi.energieinformatik.Papers.SixthOctoberFragment">
 
     <ListView
         android:id="@+id/sixthOctober_list"
